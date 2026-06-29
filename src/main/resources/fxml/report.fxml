@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.example.academic.system.controller.ReportController"
+      spacing="12"
+      alignment="CENTER"
+      style="-fx-background-color: #f4f4f4; -fx-padding: 30;">
+
+    <Label text="📊 Relatórios" 
+           style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;">
+        <font>
+            <Font name="System Bold" size="22"/>
+        </font>
+    </Label>
+
+    <Label text="Selecione o tipo de relatório desejado" 
+           style="-fx-font-size: 14px; -fx-text-fill: #7f8c8d;"/>
+
+    <Button text="📋 Relatório Resumido"
+            onAction="#gerarResumo"
+            prefWidth="300"
+            style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-radius: 5; -fx-cursor: hand;"/>
+
+    <Button text="⚖️ Relatório de Pesos"
+            onAction="#gerarPeso"
+            prefWidth="300"
+            style="-fx-background-color: #2ecc71; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-radius: 5; -fx-cursor: hand;"/>
+
+    <Button fx:id="btnPersistencia"
+            text="💾 Relatório de Persistência"
+            onAction="#gerarPersistencia"
+            prefWidth="300"
+            style="-fx-background-color: #e67e22; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-radius: 5; -fx-cursor: hand;"/>
+
+    <TextArea fx:id="resultadoArea"
+              prefHeight="250"
+              prefWidth="500"
+              style="-fx-font-family: 'Consolas', monospace; -fx-font-size: 13px; -fx-background-color: white; -fx-border-color: #bdc3c7; -fx-border-radius: 5;"/>
+
+    <Button text="🔙 Voltar ao Menu"
+            onAction="#voltar"
+            prefWidth="300"
+            style="-fx-background-color: #95a5a6; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-radius: 5; -fx-cursor: hand;"/>
+
+</VBox>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.example.academic.system.controller.AssessmentRegistrationController"
+      spacing="15"
+      alignment="CENTER"
+      style="-fx-background-color: #f4f4f4; -fx-padding: 30;">
+
+    <Label text="📝 Cadastro de Avaliação"
+           style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;">
+        <font>
+            <Font name="System Bold" size="22"/>
+        </font>
+    </Label>
+
+    <Label text="Preencha os dados da avaliação"
+           style="-fx-font-size: 14px; -fx-text-fill: #7f8c8d;"/>
+
+    <ComboBox fx:id="classCombo"
+              promptText="Selecione uma turma"
+              prefWidth="300"/>
+
+    <ComboBox fx:id="typeCombo"
+              promptText="Selecione o tipo"
+              prefWidth="300"/>
+
+    <TextField fx:id="nameField"
+               promptText="Nome da avaliação"
+               prefWidth="300"/>
+
+    <TextField fx:id="weightField"
+               promptText="Peso"
+               prefWidth="300"/>
+
+    <TextField fx:id="valueField"
+               promptText="Valor"
+               prefWidth="300"/>
+
+    <Label fx:id="campoExtraLabel"
+           visible="false"/>
+
+    <TextField fx:id="campoExtraField"
+               visible="false"
+               managed="false"
+               prefWidth="300"/>
+
+    <Button text="✅ Cadastrar Avaliação"
+            onAction="#cadastrarAvaliacao"
+            prefWidth="300"
+            style="-fx-background-color: #2ecc71; -fx-text-fill: white;"/>
+
+    <Label fx:id="mensagemLabel"
+           wrapText="true"/>
+
+    <Button text="🔙 Voltar ao Menu"
+            onAction="#voltarDashboard"
+            prefWidth="300"
+            style="-fx-background-color: #95a5a6; -fx-text-fill: white;"/>
+
+</VBox>

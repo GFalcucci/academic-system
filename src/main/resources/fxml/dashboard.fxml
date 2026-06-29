@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.example.academic.system.controller.DashboardController"
+      alignment="CENTER"
+      spacing="12"
+      style="-fx-background-color: #f4f4f4; -fx-padding: 30;">
+
+    <Label text="🎓 Sistema Acadêmico" 
+           style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;">
+        <font>
+            <Font name="System Bold" size="28"/>
+        </font>
+    </Label>
+
+    <Label text="Menu Principal" 
+           style="-fx-font-size: 16px; -fx-text-fill: #7f8c8d; -fx-padding: 0 0 10 0;"/>
+
+    <!-- Botões do Menu -->
+    <Button fx:id="btnCadastrarTurma"
+            text="🏫 Cadastrar Turma"
+            onAction="#abrirCadastroTurma"
+            prefWidth="280"
+            style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-radius: 5; -fx-cursor: hand;"/>
+
+    <Button text="📝 Registrar Avaliação"
+            onAction="#abrirCadastroAvaliacao"
+            prefWidth="280"
+            style="-fx-background-color: #2ecc71; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-radius: 5; -fx-cursor: hand;"/>
+
+    <Button text="📊 Visualizar Turmas"
+            onAction="#abrirVisualizacao"
+            prefWidth="280"
+            style="-fx-background-color: #e67e22; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-radius: 5; -fx-cursor: hand;"/>
+
+    <Button fx:id="btnRelatorios"
+            text="📈 Relatórios"
+            onAction="#abrirRelatorios"
+            prefWidth="280"
+            style="-fx-background-color: #9b59b6; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-radius: 5; -fx-cursor: hand;"/>
+
+    <!-- Separador visual -->
+    <Label style="-fx-padding: 10 0 0 0; -fx-border-color: #bdc3c7; -fx-border-width: 0 0 1 0; -fx-pref-width: 280;"/>
+
+    <Button text="🚪 Logout"
+            onAction="#logout"
+            prefWidth="280"
+            style="-fx-background-color: #f39c12; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-radius: 5; -fx-cursor: hand;"/>
+
+    <Button text="❌ Sair do Sistema"
+            onAction="#sairDoSistema"
+            prefWidth="280"
+            style="-fx-background-color: #c0392b; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-radius: 5; -fx-cursor: hand;"/>
+
+</VBox>

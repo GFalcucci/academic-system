@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.example.academic.system.controller.PersistenceConfigController"
+      spacing="15"
+      alignment="CENTER"
+      style="-fx-background-color: #f4f4f4; -fx-padding: 30;">
+
+    <Label text="💾 Configuração de Persistência" 
+           style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;">
+        <font>
+            <Font name="System Bold" size="22"/>
+        </font>
+    </Label>
+
+    <Label text="Informações sobre os arquivos de dados do sistema" 
+           style="-fx-font-size: 14px; -fx-text-fill: #7f8c8d;"/>
+
+    <TextArea fx:id="infoArea"
+              prefHeight="300"
+              prefWidth="600"
+              style="-fx-font-family: 'Consolas', monospace; -fx-font-size: 13px; -fx-background-color: white; -fx-border-color: #bdc3c7; -fx-border-radius: 5;"
+              editable="false"
+              wrapText="true"/>
+
+    <Label fx:id="statusLabel" 
+           style="-fx-font-size: 13px; -fx-text-fill: #27ae60;" 
+           wrapText="true"/>
+
+    <Button text="🔄 Atualizar Informações"
+            onAction="#handleRefresh"
+            prefWidth="300"
+            style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-radius: 5; -fx-cursor: hand;"/>
+
+    <Button text="📂 Recarregar Dados"
+            onAction="#handleReload"
+            prefWidth="300"
+            style="-fx-background-color: #e67e22; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-radius: 5; -fx-cursor: hand;"/>
+
+    <Button text="🔙 Voltar ao Menu"
+            onAction="#handleVoltar"
+            prefWidth="300"
+            style="-fx-background-color: #95a5a6; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-radius: 5; -fx-cursor: hand;"/>
+
+</VBox>
